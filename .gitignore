@@ -1,0 +1,111 @@
+# ---------------------------------------------------------------------------
+# Build output
+# ---------------------------------------------------------------------------
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.flattened-pom.xml
+# Maven wrapper: keep the properties file, never the downloaded jar
+.mvn/wrapper/maven-wrapper.jar
+.mvn/timing.properties
+
+# ---------------------------------------------------------------------------
+# Java
+# ---------------------------------------------------------------------------
+*.class
+*.ctxt
+hs_err_pid*.log
+replay_pid*.log
+*.hprof
+*.jfr
+
+# ---------------------------------------------------------------------------
+# Quarkus
+# ---------------------------------------------------------------------------
+.quarkus/
+quarkus.log*
+
+# ---------------------------------------------------------------------------
+# Databases created locally (the sample database is generated from
+# qs-testdata/src/main/resources/testdata/northstar.json, never committed)
+# ---------------------------------------------------------------------------
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# ---------------------------------------------------------------------------
+# Secrets and local configuration
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+application-local.properties
+.claude/settings.local.json
+
+# ---------------------------------------------------------------------------
+# Logs and test reports outside target/
+# ---------------------------------------------------------------------------
+*.log
+logs/
+
+# ---------------------------------------------------------------------------
+# IDEs
+# ---------------------------------------------------------------------------
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse / VS Code Java language server
+.classpath
+.project
+.settings/
+.factorypath
+bin/
+.apt_generated/
+.apt_generated_tests/
+
+# VS Code: personal settings stay local; shared recommendations may be committed
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+
+# NetBeans
+nbproject/private/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+# ---------------------------------------------------------------------------
+# Node (front-end tooling, if added later)
+# ---------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+
+# ---------------------------------------------------------------------------
+# Operating systems
+# ---------------------------------------------------------------------------
+.DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*~
+*.swp
+*.swo
