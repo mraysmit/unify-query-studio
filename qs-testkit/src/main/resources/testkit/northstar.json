@@ -1,0 +1,158 @@
+{
+  "name": "Northstar Commerce",
+  "description": "Fictional retail data for the visual query designer.",
+  "tables": [
+    {
+      "name": "Customers", "description": "People and businesses who buy from us", "color": "violet",
+      "fields": [
+        {"name":"customer_id","type":"number","primaryKey":true},
+        {"name":"name","type":"text"}, {"name":"email","type":"text"},
+        {"name":"city","type":"text"}, {"name":"country","type":"text"}
+      ],
+      "rows": [
+        {"customer_id":1,"name":"Amelia Chen","email":"amelia@example.com","city":"Seattle","country":"USA"},
+        {"customer_id":2,"name":"Oliver Smith","email":"oliver@example.com","city":"London","country":"UK"},
+        {"customer_id":3,"name":"Sofia Martinez","email":"sofia@example.com","city":"Austin","country":"USA"},
+        {"customer_id":4,"name":"Noah Williams","email":"noah@example.com","city":"Portland","country":"USA"},
+        {"customer_id":5,"name":"Isabella Rossi","email":"isabella@example.com","city":"Milan","country":"Italy"},
+        {"customer_id":6,"name":"Ethan Park","email":"ethan@example.com","city":"Seoul","country":"South Korea"},
+        {"customer_id":7,"name":"Mia Johnson","email":"mia@example.com","city":"Seattle","country":"USA"},
+        {"customer_id":8,"name":"Lucas Dubois","email":"lucas@example.com","city":"Paris","country":"France"},
+        {"customer_id":9,"name":"Ava Patel","email":"ava@example.com","city":"London","country":"UK"},
+        {"customer_id":10,"name":"Liam Brown","email":"liam@example.com","city":"Denver","country":"USA"},
+        {"customer_id":11,"name":"Emma Wilson","email":"emma@example.com","city":"Toronto","country":"Canada"},
+        {"customer_id":12,"name":"Leo Nakamura","email":"leo@example.com","city":"Tokyo","country":"Japan"}
+      ]
+    },
+    {
+      "name": "Orders", "description": "Order dates, status, and totals", "color": "blue",
+      "fields": [
+        {"name":"order_id","type":"number","primaryKey":true},
+        {"name":"customer_id","type":"number"}, {"name":"order_date","type":"date"},
+        {"name":"status","type":"text"}, {"name":"total","type":"number"}
+      ],
+      "rows": [
+        {"order_id":1001,"customer_id":1,"order_date":"2026-10-03","status":"Completed","total":248},
+        {"order_id":1002,"customer_id":2,"order_date":"2026-10-05","status":"Completed","total":179},
+        {"order_id":1003,"customer_id":3,"order_date":"2026-10-08","status":"Processing","total":89},
+        {"order_id":1004,"customer_id":4,"order_date":"2026-10-11","status":"Completed","total":358},
+        {"order_id":1005,"customer_id":5,"order_date":"2026-10-14","status":"Shipped","total":129},
+        {"order_id":1006,"customer_id":1,"order_date":"2026-10-18","status":"Completed","total":69},
+        {"order_id":1007,"customer_id":6,"order_date":"2026-10-21","status":"Completed","total":437},
+        {"order_id":1008,"customer_id":7,"order_date":"2026-10-25","status":"Cancelled","total":218},
+        {"order_id":1009,"customer_id":8,"order_date":"2026-11-01","status":"Completed","total":159},
+        {"order_id":1010,"customer_id":9,"order_date":"2026-11-03","status":"Processing","total":238},
+        {"order_id":1011,"customer_id":3,"order_date":"2026-11-05","status":"Completed","total":308},
+        {"order_id":1012,"customer_id":10,"order_date":"2026-11-08","status":"Completed","total":79},
+        {"order_id":1013,"customer_id":2,"order_date":"2026-11-10","status":"Shipped","total":327},
+        {"order_id":1014,"customer_id":7,"order_date":"2026-11-12","status":"Completed","total":199},
+        {"order_id":1015,"customer_id":4,"order_date":"2026-11-15","status":"Completed","total":139},
+        {"order_id":1016,"customer_id":5,"order_date":"2026-11-17","status":"Cancelled","total":59},
+        {"order_id":1017,"customer_id":8,"order_date":"2026-11-19","status":"Completed","total":288},
+        {"order_id":1018,"customer_id":6,"order_date":"2026-11-21","status":"Processing","total":168},
+        {"order_id":1019,"customer_id":9,"order_date":"2026-11-23","status":"Completed","total":398},
+        {"order_id":1020,"customer_id":10,"order_date":"2026-11-25","status":"Shipped","total":99}
+      ]
+    },
+    {
+      "name": "OrderItems", "description": "Individual products in each order", "color": "amber",
+      "fields": [
+        {"name":"item_id","type":"number","primaryKey":true},
+        {"name":"order_id","type":"number"}, {"name":"product_id","type":"number"},
+        {"name":"quantity","type":"number"}, {"name":"unit_price","type":"number"}
+      ],
+      "rows": [
+        {"item_id":1,"order_id":1001,"product_id":1,"quantity":1,"unit_price":179},
+        {"item_id":2,"order_id":1001,"product_id":2,"quantity":1,"unit_price":69},
+        {"item_id":3,"order_id":1002,"product_id":1,"quantity":1,"unit_price":179},
+        {"item_id":4,"order_id":1003,"product_id":3,"quantity":1,"unit_price":89},
+        {"item_id":5,"order_id":1004,"product_id":1,"quantity":2,"unit_price":179},
+        {"item_id":6,"order_id":1005,"product_id":4,"quantity":1,"unit_price":129},
+        {"item_id":7,"order_id":1006,"product_id":2,"quantity":1,"unit_price":69},
+        {"item_id":8,"order_id":1007,"product_id":1,"quantity":2,"unit_price":179},
+        {"item_id":9,"order_id":1007,"product_id":5,"quantity":1,"unit_price":79},
+        {"item_id":10,"order_id":1008,"product_id":3,"quantity":1,"unit_price":89},
+        {"item_id":11,"order_id":1008,"product_id":4,"quantity":1,"unit_price":129},
+        {"item_id":12,"order_id":1009,"product_id":6,"quantity":1,"unit_price":159},
+        {"item_id":13,"order_id":1010,"product_id":1,"quantity":1,"unit_price":179},
+        {"item_id":14,"order_id":1010,"product_id":7,"quantity":1,"unit_price":59},
+        {"item_id":15,"order_id":1011,"product_id":1,"quantity":1,"unit_price":179},
+        {"item_id":16,"order_id":1011,"product_id":4,"quantity":1,"unit_price":129},
+        {"item_id":17,"order_id":1012,"product_id":5,"quantity":1,"unit_price":79},
+        {"item_id":18,"order_id":1013,"product_id":1,"quantity":1,"unit_price":179},
+        {"item_id":19,"order_id":1013,"product_id":3,"quantity":1,"unit_price":89},
+        {"item_id":20,"order_id":1013,"product_id":7,"quantity":1,"unit_price":59},
+        {"item_id":21,"order_id":1014,"product_id":8,"quantity":1,"unit_price":199},
+        {"item_id":22,"order_id":1015,"product_id":2,"quantity":1,"unit_price":69},
+        {"item_id":23,"order_id":1015,"product_id":9,"quantity":1,"unit_price":70},
+        {"item_id":24,"order_id":1016,"product_id":7,"quantity":1,"unit_price":59},
+        {"item_id":25,"order_id":1017,"product_id":4,"quantity":1,"unit_price":129},
+        {"item_id":26,"order_id":1017,"product_id":6,"quantity":1,"unit_price":159},
+        {"item_id":27,"order_id":1018,"product_id":2,"quantity":1,"unit_price":69},
+        {"item_id":28,"order_id":1018,"product_id":10,"quantity":1,"unit_price":99},
+        {"item_id":29,"order_id":1019,"product_id":8,"quantity":2,"unit_price":199},
+        {"item_id":30,"order_id":1020,"product_id":10,"quantity":1,"unit_price":99}
+      ]
+    },
+    {
+      "name": "Products", "description": "The product catalog", "color": "teal",
+      "fields": [
+        {"name":"product_id","type":"number","primaryKey":true},
+        {"name":"name","type":"text"}, {"name":"category","type":"text"},
+        {"name":"price","type":"number"}, {"name":"in_stock","type":"boolean"}
+      ],
+      "rows": [
+        {"product_id":1,"name":"Studio Headphones","category":"Audio","price":179,"in_stock":true},
+        {"product_id":2,"name":"Desk Mat","category":"Workspace","price":69,"in_stock":true},
+        {"product_id":3,"name":"Wireless Mouse","category":"Accessories","price":89,"in_stock":true},
+        {"product_id":4,"name":"Mechanical Keyboard","category":"Accessories","price":129,"in_stock":true},
+        {"product_id":5,"name":"Laptop Stand","category":"Workspace","price":79,"in_stock":true},
+        {"product_id":6,"name":"Desk Lamp","category":"Workspace","price":159,"in_stock":false},
+        {"product_id":7,"name":"USB Hub","category":"Accessories","price":59,"in_stock":true},
+        {"product_id":8,"name":"Portable Speaker","category":"Audio","price":199,"in_stock":true},
+        {"product_id":9,"name":"Cable Kit","category":"Accessories","price":70,"in_stock":true},
+        {"product_id":10,"name":"Webcam","category":"Accessories","price":99,"in_stock":false}
+      ]
+    }
+  ],
+  "relationships": [
+    {"fromTable":"Customers","fromField":"customer_id","toTable":"Orders","toField":"customer_id"},
+    {"fromTable":"Orders","fromField":"order_id","toTable":"OrderItems","toField":"order_id"},
+    {"fromTable":"Products","fromField":"product_id","toTable":"OrderItems","toField":"product_id"}
+  ],
+  "queries": [
+    {
+      "name":"Completed orders",
+      "tables":[{"name":"Customers","x":48,"y":48},{"name":"Orders","x":410,"y":48}],
+      "joins":[{"fromTable":"Customers","fromField":"customer_id","toTable":"Orders","toField":"customer_id","type":"INNER"}],
+      "columns":[
+        {"table":"Customers","field":"name","alias":"customer","show":true},
+        {"table":"Customers","field":"city","show":true},
+        {"table":"Orders","field":"order_date","show":true,"sort":"DESC"},
+        {"table":"Orders","field":"total","show":true,"criteria":">= 100"},
+        {"table":"Orders","field":"status","show":true,"criteria":"= 'Completed'"}
+      ]
+    },
+    {
+      "name":"Sales by country",
+      "totals":true,
+      "tables":[{"name":"Customers","x":48,"y":48},{"name":"Orders","x":410,"y":48}],
+      "joins":[{"fromTable":"Customers","fromField":"customer_id","toTable":"Orders","toField":"customer_id","type":"INNER"}],
+      "columns":[
+        {"table":"Customers","field":"country","show":true},
+        {"table":"Orders","field":"order_id","alias":"orders","aggregate":"COUNT","show":true},
+        {"table":"Orders","field":"total","alias":"revenue","aggregate":"SUM","show":true,"sort":"DESC"}
+      ]
+    },
+    {
+      "name":"Customers without orders",
+      "tables":[{"name":"Customers","x":48,"y":48},{"name":"Orders","x":410,"y":48}],
+      "joins":[{"fromTable":"Customers","fromField":"customer_id","toTable":"Orders","toField":"customer_id","type":"LEFT"}],
+      "columns":[
+        {"table":"Customers","field":"name","show":true},
+        {"table":"Customers","field":"country","show":true},
+        {"table":"Orders","field":"order_id","show":false,"criteria":"IS NULL"}
+      ]
+    }
+  ]
+}
